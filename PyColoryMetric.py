@@ -2,12 +2,22 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage.color import rgb2lab, deltaE_cie76
-from google.colab import files
+from IPython.display import display
+import ipywidgets as widgets
 
 def upload_image():
-    uploaded = files.upload()
-    image_files = list(uploaded.keys())
-    return image_files[0]
+    uploader = widgets.FileUpload(accept='.jpg,.png,.jpeg', multiple=False)
+    display(uploader)
+
+    while not uploader.value:
+    pass
+
+    uploaded_file = list(uploader.value.values())[0]
+    file_name = uploaded_file['name']
+    with open(file_name, "wb") as f:
+        f.write(uploaded_file['content'])
+    
+    return file_name
 
 def rgb_to_cmyk(image):
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -176,6 +186,11 @@ def analyze_printing_color():
     # Reading Image
     target = cv2.imread(target_file)
     hasil = cv2.imread(hasil_file)
+
+    if target is None:
+        raise ValueError(f"Gagal membaca gambar target: {target_file}")
+    if hasil is None:
+        raise ValueError(f"Gagal membaca gambar hasil: {hasil_file}")
 
     # Mengubah warna RGB ke warna CMYK
     cmyk_target = rgb_to_cmyk(target)
