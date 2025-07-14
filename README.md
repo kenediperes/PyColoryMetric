@@ -17,12 +17,12 @@ b. Gambar target, (referensi/hasil yang diharapkan, Color Range)
 c. Gambar hasil, (cetakan Saat ini atau produksi saat ini)
 d. Konversi Ruang Warna, Kedua gambar dikonversi dari RGB ke CMYK
 
-4. Metrik Analisis:
+4. Metrik Analisis
 a. Perbedaan warna Delta E (standar CIE76)
 b. Density channel CMYK (persentase rata-rata)
 c. Soliditas warna (standar deviasi dalam persentase)
 
-5. Output Visual:
+5. Output Visual
 a. Perbandingan gambar dengan pembagian channel CMYK
 b. Grafik garis perbandingan kepadatan CMYK
 c. Diagram batang perbedaan statistik
