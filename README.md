@@ -3,7 +3,7 @@ PyColoryMetric - Program Analisis Warna.
 1. Gambaran Umum
 PyColoryMetric adalah Program berbasis Python yang dirancang untuk menganalisis dan membandingkan antara dua gambar cetakan (target dan hasil). Program ini memberikan pengukuran kuantitatif perbedaan warna, Density warna, dan soliditas warna untuk mengevaluasi kualitas hasil output produksi.
 
-2.Fitur Utama
+2. Fitur Utama
 a. Konversi warna, Mengubah gambar RGB ke ruang warna CMYK untuk analisis percetakan
 b. Pengukuran Warna, Menghitung Delta E (CIE76) antara gambar target dan hasil
 c. Analisis Density, Mengukur Soliditas tinta untuk setiap channel CMYK
